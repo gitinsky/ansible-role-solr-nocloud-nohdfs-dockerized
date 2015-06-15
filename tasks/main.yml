@@ -1,0 +1,15 @@
+---
+- name: make a build dir
+  file: state=directory name=/root/solr-cloud-hdfs-dockerized
+
+- name: put Dockerfile
+  template: src=Dockerfile dest=/root/solr-cloud-hdfs-dockerized/Dockerfile
+
+- name: put start.sh
+  template: src=start.sh dest=/root/solr-cloud-hdfs-dockerized/start.sh mode=0755
+
+- name: build a Docker image for HDFS-enabled Solr Cloud
+  command: docker build -t gitinsky/solr-cloud-hdfs:0.1.0 --rm /root/solr-cloud-hdfs-dockerized
+
+- name: tag it as latest
+  command: docker build -t gitinsky/solr-cloud-hdfs:latest --rm /root/solr-cloud-hdfs-dockerized
