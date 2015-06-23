@@ -7,7 +7,7 @@ RUN \
   wget http://apache-mirror.rbc.ru/pub/apache/lucene/solr/5.2.1/solr-5.2.1.tgz && \
   tar xvzf solr-5.2.1.tgz && \
   rm -f solr-5.2.1.tgz && \
-  mv /solr-5.2.1 /solr && mkdir /solr/home
+  ln -s /solr-5.2.1 /solr && mkdir /solr/home
 
 COPY start.sh /start.sh
 
