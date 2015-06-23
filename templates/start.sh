@@ -1,2 +1,2 @@
 #!/bin/bash
-/solr/bin/solr -f
+/solr/bin/solr -f -s /solr/home
