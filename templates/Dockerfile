@@ -1,4 +1,4 @@
-FROM gitinsky/oracle-java-8:0.1.3
+FROM gitinsky/oracle-java-8:0.1.4
 MAINTAINER Git In Sky <support@gitinsky.com>
 
 RUN \
