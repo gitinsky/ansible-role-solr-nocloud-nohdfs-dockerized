@@ -1,2 +1,2 @@
 #!/bin/bash
-/solr/bin/solr -f -s /solr/home
+/solr/bin/solr -m {{ solr_heap_size }} -f -s /solr/home
