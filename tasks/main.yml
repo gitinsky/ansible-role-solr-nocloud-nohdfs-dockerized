@@ -9,7 +9,7 @@
   template: src=start.sh dest=/root/solr-nocloud-nohdfs-dockerized/start.sh mode=0755
 
 - name: build a Docker image for Solr
-  command: docker build -t gitinsky/solr-nocloud-nohdfs:0.1.1 --rm /root/solr-nocloud-nohdfs-dockerized
+  command: docker build -t gitinsky/solr-nocloud-nohdfs:0.1.2 --rm /root/solr-nocloud-nohdfs-dockerized
 
 - name: tag it as latest
   command: docker build -t gitinsky/solr-nocloud-nohdfs:latest --rm /root/solr-nocloud-nohdfs-dockerized
